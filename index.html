@@ -95,6 +95,27 @@
     }
     .logo-glow { animation: pulseGlow 3s ease-in-out infinite; }
 
+    /* Design polish */
+    .card-product {
+      background: linear-gradient(160deg, rgba(15,31,44,0.9), rgba(6,16,24,0.95));
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-product:hover {
+      border-color: rgba(34,211,238,0.35);
+      box-shadow: 0 12px 40px rgba(34,211,238,0.12);
+    }
+    .section-title {
+      letter-spacing: 0.02em;
+    }
+    .hero-glow {
+      text-shadow: 0 0 40px rgba(34,211,238,0.25);
+    }
+    .nav-blur {
+      box-shadow: 0 1px 0 rgba(34,211,238,0.08);
+    }
+
+
     .nav-pill {
       font-size: 0.8rem;
       font-weight: 600;
@@ -394,7 +415,7 @@
     <div class="h-px bg-gradient-to-r from-urban-accent/50 via-white/10 to-transparent my-6"></div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('un-verano-sin-ti.jpg','Un Verano Sin Ti','Bad Bunny',3000)">
           <img src="un-verano-sin-ti.jpg" class="w-full h-full object-cover" alt="Un Verano Sin Ti"/>
         </div>
@@ -405,238 +426,238 @@
         </div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('x100pre.jpg','X 100PRE','Bad Bunny',3000)">
           <img src="x100pre.jpg" class="w-full h-full object-cover" alt="X 100PRE"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">X 100PRE</p><p class="text-xs text-gray-500">Bad Bunny</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('oasis.jpg','Oasis','Bad Bunny & J Balvin',3000)">
           <img src="oasis.jpg" class="w-full h-full object-cover" alt="Oasis"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Oasis</p><p class="text-xs text-gray-500">Bad Bunny & J Balvin</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('milo-111.jpg','111','Milo J',3000)">
           <img src="milo-111.jpg" class="w-full h-full object-cover" alt="111"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">111</p><p class="text-xs text-gray-500">Milo J</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('milo-la-vida.jpg','La vida era más corta','Milo J',3000)">
           <img src="milo-la-vida.jpg" class="w-full h-full object-cover" alt="La vida era más corta"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">La vida era más corta</p><p class="text-xs text-gray-500">Milo J</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('milo-166.jpg','166','Milo J',3000)">
           <img src="milo-166.jpg" class="w-full h-full object-cover" alt="166"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">166</p><p class="text-xs text-gray-500">Milo J</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('airbag-trampa.jpg','Al parecer todo ha sido una trampa','Airbag',3000)">
           <img src="airbag-trampa.jpg" class="w-full h-full object-cover" alt="Airbag"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Al parecer todo ha sido una trampa</p><p class="text-xs text-gray-500">Airbag</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('airbag-voragine.jpg','Vorágine','Airbag',3000)">
           <img src="airbag-voragine.jpg" class="w-full h-full object-cover" alt="Vorágine"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Vorágine</p><p class="text-xs text-gray-500">Airbag</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('airbag-mentira.jpg','Mentira la Verdad','Airbag',3000)">
           <img src="airbag-mentira.jpg" class="w-full h-full object-cover" alt="Mentira la Verdad"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Mentira la Verdad</p><p class="text-xs text-gray-500">Airbag</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('hadas.jpg','Por si mañana no estoy','Omar Courtz',3000)">
           <img src="hadas.jpg" class="w-full h-full object-cover" alt="Por si mañana no estoy"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Por si mañana no estoy</p><p class="text-xs text-gray-500">Omar Courtz</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('nicki-nicole.jpg','Primera Musa','Omar Courtz',3000)">
           <img src="nicki-nicole.jpg" class="w-full h-full object-cover" alt="Primera Musa"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Primera Musa</p><p class="text-xs text-gray-500">Omar Courtz</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('ysy-a.jpg','YSY A','YSY A',3000)">
           <img src="ysy-a.jpg" class="w-full h-full object-cover" alt="YSY A"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">YSY A</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
-        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('casa-roja.jpg','Casa roja','Álbum',3000)">
-          <img src="casa-roja.jpg" class="w-full h-full object-cover" alt="Casa roja"/>
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
+        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('casa-roja.jpg','Private Suite','Álbum',3000)">
+          <img src="casa-roja.jpg" class="w-full h-full object-cover" alt="Private Suite"/>
         </div>
-        <div class="p-3"><p class="font-medium text-sm">Casa roja</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
+        <div class="p-3"><p class="font-medium text-sm">Private Suite</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
-        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('upside-down.jpg','Upside down','Álbum',3000)">
-          <img src="upside-down.jpg" class="w-full h-full object-cover" alt="Upside down"/>
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
+        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('upside-down.jpg','Ameri','Álbum',3000)">
+          <img src="upside-down.jpg" class="w-full h-full object-cover" alt="Ameri"/>
         </div>
-        <div class="p-3"><p class="font-medium text-sm">Upside down</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
+        <div class="p-3"><p class="font-medium text-sm">Ameri</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('soundwave.jpg','I Wanna Be Yours / AM','Arctic Monkeys',3000)">
           <img src="soundwave.jpg" class="w-full h-full object-cover" alt="AM"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">I Wanna Be Yours</p><p class="text-xs text-gray-500">Arctic Monkeys · AM</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('club-pelea.jpg','El Club de la Pelea','Álbum',3000)">
           <img src="club-pelea.jpg" class="w-full h-full object-cover" alt="Club de la Pelea"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">El Club de la Pelea</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('logo-oscuro.jpg','444 Remix','Álbum',3000)">
           <img src="logo-oscuro.jpg" class="w-full h-full object-cover" alt="444 Remix"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">444 Remix</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
-        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('anuel-malas.jpg','Las malas son pretas','Anuel AA',3000)">
-          <img src="anuel-malas.jpg" class="w-full h-full object-cover" alt="Las malas son pretas"/>
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
+        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('anuel-malas.jpg','Las más bonitas son pu**','Anuel AA',3000)">
+          <img src="anuel-malas.jpg" class="w-full h-full object-cover" alt="Las más bonitas son pu**"/>
         </div>
-        <div class="p-3"><p class="font-medium text-sm">Las malas son pretas</p><p class="text-xs text-gray-500">Anuel AA</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
+        <div class="p-3"><p class="font-medium text-sm">Las más bonitas son pu**</p><p class="text-xs text-gray-500">Anuel AA</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('anuel-cadenas.jpg','Anuel AA','Cadenas',3000)">
           <img src="anuel-cadenas.jpg" class="w-full h-full object-cover" alt="Anuel AA"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Anuel AA</p><p class="text-xs text-gray-500">Cadenas</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('anuel-rhlm.jpg','Real Hasta la Muerte','Anuel AA',3000)">
           <img src="anuel-rhlm.jpg" class="w-full h-full object-cover" alt="Real Hasta la Muerte"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Real Hasta la Muerte</p><p class="text-xs text-gray-500">Anuel AA</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('anuel-trofeos.jpg','Anuel AA','Trofeos',3000)">
           <img src="anuel-trofeos.jpg" class="w-full h-full object-cover" alt="Anuel AA"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Anuel AA</p><p class="text-xs text-gray-500">Trofeos</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('anuel-perfil.jpg','Anuel AA','Perfil',3000)">
           <img src="anuel-perfil.jpg" class="w-full h-full object-cover" alt="Anuel AA"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Anuel AA</p><p class="text-xs text-gray-500">Perfil</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('maria-nena.jpg','La Nena de Argentina','María Becerra',3000)">
           <img src="maria-nena.jpg" class="w-full h-full object-cover" alt="La Nena de Argentina"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">La Nena de Argentina</p><p class="text-xs text-gray-500">María Becerra</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('maria-quimera.jpg','Quimera','María Becerra',3000)">
           <img src="maria-quimera.jpg" class="w-full h-full object-cover" alt="Quimera"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Quimera</p><p class="text-xs text-gray-500">María Becerra</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('badbunny-bandera.jpg','Bad Bunny','En vivo',3000)">
           <img src="badbunny-bandera.jpg" class="w-full h-full object-cover" alt="Bad Bunny"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Bad Bunny</p><p class="text-xs text-gray-500">En vivo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('callejeros.jpg','Señales','Callejeros',3000)">
           <img src="callejeros.jpg" class="w-full h-full object-cover" alt="Señales"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Señales</p><p class="text-xs text-gray-500">Callejeros</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('oktubre.jpg','Oktubre','Los Redondos',3000)">
           <img src="oktubre.jpg" class="w-full h-full object-cover" alt="Oktubre"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Oktubre</p><p class="text-xs text-gray-500">Los Redondos</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
-        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('duki-rosa.jpg','Duki','Pink money',3000)">
-          <img src="duki-rosa.jpg" class="w-full h-full object-cover" alt="Duki"/>
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
+        <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('duki-rosa.jpg','Zell','Álbum',3000)">
+          <img src="duki-rosa.jpg" class="w-full h-full object-cover" alt="Zell"/>
         </div>
-        <div class="p-3"><p class="font-medium text-sm">Duki</p><p class="text-xs text-gray-500">Pink money</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
+        <div class="p-3"><p class="font-medium text-sm">Zell</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('duki-escenario.jpg','Duki','En vivo',3000)">
           <img src="duki-escenario.jpg" class="w-full h-full object-cover" alt="Duki"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Duki</p><p class="text-xs text-gray-500">En vivo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('duki-manos.jpg','Duki','Rock',3000)">
           <img src="duki-manos.jpg" class="w-full h-full object-cover" alt="Duki"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Duki</p><p class="text-xs text-gray-500">Rock</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('paulo-londra.jpg','Paulo Londra','En vivo',3000)">
           <img src="paulo-londra.jpg" class="w-full h-full object-cover" alt="Paulo Londra"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Paulo Londra</p><p class="text-xs text-gray-500">En vivo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('khea.jpg','Trapicheo','Khea',3000)">
           <img src="khea.jpg" class="w-full h-full object-cover" alt="Trapicheo"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Trapicheo</p><p class="text-xs text-gray-500">Khea</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('lit-killah.jpg','Lit Killah','Foto',3000)">
           <img src="lit-killah.jpg" class="w-full h-full object-cover" alt="Lit Killah"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Lit Killah</p><p class="text-xs text-gray-500">Foto</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('trap-capos.jpg','Trap Capos II','Álbum',3000)">
           <img src="trap-capos.jpg" class="w-full h-full object-cover" alt="Trap Capos II"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Trap Capos II</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('duo-favorito.jpg','Tu Dúo Favorito','Álbum',3000)">
           <img src="duo-favorito.jpg" class="w-full h-full object-cover" alt="Tu Dúo Favorito"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Tu Dúo Favorito</p><p class="text-xs text-gray-500">Álbum</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('jhayco-trip.jpg','Trip','Jhayco',3000)">
           <img src="jhayco-trip.jpg" class="w-full h-full object-cover" alt="Trip"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Trip</p><p class="text-xs text-gray-500">Jhayco</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('ateez.jpg','Ateez','K-pop',3000)">
           <img src="ateez.jpg" class="w-full h-full object-cover" alt="Ateez"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Ateez</p><p class="text-xs text-gray-500">K-pop</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreview('nene-homerun.jpg','Home Run','Poster',3000)">
           <img src="nene-homerun.jpg" class="w-full h-full object-cover" alt="Home Run"/>
         </div>
@@ -657,7 +678,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="mb-8 text-center sm:text-left">
       <p class="text-urban-cyan text-xs tracking-[0.3em] uppercase mb-1">La pasión</p>
-      <h2 class="font-display text-4xl sm:text-6xl leading-none">
+      <h2 class="font-display text-4xl sm:text-6xl leading-none section-title">
         <span class="text-white">FÚTBOL</span>
       </h2>
       <div class="flex items-center gap-3 mt-3 justify-center sm:justify-start">
@@ -666,73 +687,73 @@
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('messi-copa.jpg','Messi','Fútbol')">
           <img src="messi-copa.jpg" class="w-full h-full object-cover" alt="Messi"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Messi</p><p class="text-xs text-gray-500">Copa del Mundo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden bg-white flex items-center justify-center p-6 card-hover" onclick="openPreviewSize('river-logo.jpg','River Plate','Fútbol')">
           <img src="river-logo.jpg" class="w-full h-full object-contain" alt="River"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">River Plate</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden bg-white flex items-center justify-center p-6 card-hover" onclick="openPreviewSize('boca-logo.jpg','Boca Juniors','Fútbol')">
           <img src="boca-logo.jpg" class="w-full h-full object-contain" alt="Boca"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Boca Juniors</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('racing.jpg','Racing Club','Escudo')">
           <img src="racing.jpg" class="w-full h-full object-contain" alt="Racing Club"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Racing Club</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('independiente.jpg','Independiente','Escudo')">
           <img src="independiente.jpg" class="w-full h-full object-contain" alt="Independiente"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Independiente</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('san-lorenzo.jpg','San Lorenzo','Escudo')">
           <img src="san-lorenzo.jpg" class="w-full h-full object-contain" alt="San Lorenzo"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">San Lorenzo</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('atletico-tucuman.jpg','Atlético Tucumán','Escudo')">
           <img src="atletico-tucuman.jpg" class="w-full h-full object-contain" alt="Atlético Tucumán"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Atlético Tucumán</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('nacional.jpg','Nacional','Escudo')">
           <img src="nacional.jpg" class="w-full h-full object-contain" alt="Nacional"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Nacional</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('penarol.jpg','Peñarol','Escudo')">
           <img src="penarol.jpg" class="w-full h-full object-contain" alt="Peñarol"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Peñarol</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('deportivo-merlo.jpg','Deportivo Merlo','Escudo')">
           <img src="deportivo-merlo.jpg" class="w-full h-full object-contain" alt="Deportivo Merlo"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Deportivo Merlo</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('midland.jpg','F.C. Midland','Escudo')">
           <img src="midland.jpg" class="w-full h-full object-contain" alt="F.C. Midland"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">F.C. Midland</p><p class="text-xs text-gray-500">Escudo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover bg-white flex items-center justify-center p-4" onclick="openPreviewSize('independiente-verde.jpg','C.A.I.','Escudo')">
           <img src="independiente-verde.jpg" class="w-full h-full object-contain" alt="C.A.I."/>
         </div>
@@ -753,7 +774,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="mb-8 text-center sm:text-left">
       <p class="text-urban-cyan text-xs tracking-[0.3em] uppercase mb-1">Fe</p>
-      <h2 class="font-display text-4xl sm:text-6xl leading-none">
+      <h2 class="font-display text-4xl sm:text-6xl leading-none section-title">
         PARA LOS <span class="gradient-text">CRISTIANOS</span>
       </h2>
       <div class="flex items-center gap-3 mt-3 justify-center sm:justify-start">
@@ -762,19 +783,19 @@
       </div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('cristo.jpg','Cristo','Otros')">
           <img src="cristo.jpg" class="w-full h-full object-cover" alt="Cristo"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Cristo</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('manos-cruz.jpg','Manos + Cruz','Otros')">
           <img src="manos-cruz.jpg" class="w-full h-full object-cover" alt="Manos cruz"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Manos + Cruz</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('todo-sin-cristo.jpg','Todo sin Cristo es nada','Frase')">
           <img src="todo-sin-cristo.jpg" class="w-full h-full object-cover" alt="Todo sin Cristo es nada"/>
         </div>
@@ -795,7 +816,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="mb-8 text-center sm:text-left">
       <p class="text-urban-cyan text-xs tracking-[0.3em] uppercase mb-1">Otaku</p>
-      <h2 class="font-display text-4xl sm:text-6xl leading-none">ANIME</h2>
+      <h2 class="font-display text-4xl sm:text-6xl leading-none section-title">ANIME</h2>
       <div class="flex items-center gap-3 mt-3 justify-center sm:justify-start">
         <div class="h-px w-12 bg-urban-accent"></div>
         <span class="text-xs text-gray-400">Chico $3.000 · Grande $4.000</span>
@@ -803,37 +824,37 @@
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('naruto.jpg','Naruto','Naruto')">
           <img src="naruto.jpg" class="w-full h-full object-cover" alt="Naruto"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Naruto</p><p class="text-xs text-gray-500">Naruto</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('naruto-baryon.jpg','Naruto Baryon','Naruto')">
           <img src="naruto-baryon.jpg" class="w-full h-full object-cover" alt="Naruto Baryon"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Naruto Baryon</p><p class="text-xs text-gray-500">Naruto</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('vegeta.jpg','Majin Vegeta','Dragon Ball')">
           <img src="vegeta.jpg" class="w-full h-full object-cover" alt="Majin Vegeta"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Majin Vegeta</p><p class="text-xs text-gray-500">Dragon Ball</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('goku-ui.jpg','Goku Ultra Instinct','Dragon Ball')">
           <img src="goku-ui.jpg" class="w-full h-full object-cover" alt="Goku Ultra Instinct"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Goku Ultra Instinct</p><p class="text-xs text-gray-500">Dragon Ball</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('goku-blue.jpg','Goku Blue','Dragon Ball')">
           <img src="goku-blue.jpg" class="w-full h-full object-cover" alt="Goku Blue"/>
         </div>
         <div class="p-3"><p class="font-medium text-sm">Goku Blue</p><p class="text-xs text-gray-500">Dragon Ball</p><p class="text-urban-accent font-bold text-sm mt-1">$3.000 / $4.000</p></div>
       </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('ninja-luna.jpg','Ninja','Luna')">
           <img src="ninja-luna.jpg" class="w-full h-full object-cover" alt="Ninja"/>
         </div>
@@ -854,7 +875,7 @@
   <div class="max-w-6xl mx-auto">
     <div class="mb-8 text-center sm:text-left">
       <p class="text-urban-cyan text-xs tracking-[0.3em] uppercase mb-1">Identidad</p>
-      <h2 class="font-display text-4xl sm:text-6xl leading-none">FRASES <span class="text-urban-accent">&</span> ARGENTINA</h2>
+      <h2 class="font-display text-4xl sm:text-6xl leading-none section-title">FRASES <span class="text-urban-accent">&</span> ARGENTINA</h2>
       <div class="flex items-center gap-3 mt-3 justify-center sm:justify-start">
         <div class="h-px w-12 bg-urban-accent"></div>
         <span class="text-xs text-gray-400">Chico $3.000 · Grande $4.000</span>
@@ -862,7 +883,7 @@
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 
-      <div class="bg-black/40 backdrop-blur rounded-xl overflow-hidden border border-white/5">
+      <div class="card-product backdrop-blur rounded-xl overflow-hidden">
         <div class="aspect-square overflow-hidden card-hover" onclick="openPreviewSize('malvinas.jpg','Las Malvinas son Argentinas','Frase')">
           <img src="malvinas.jpg" class="w-full h-full object-cover" alt="Las Malvinas son Argentinas"/>
         </div>
@@ -980,14 +1001,14 @@
   <div class="max-w-xl mx-auto">
     <div class="text-center mb-8">
       <p class="text-urban-cyan text-xs tracking-[0.25em] uppercase mb-1">Tu idea</p>
-      <h2 class="font-display text-4xl sm:text-5xl mb-2">SUGERENCIAS</h2>
+      <h2 class="font-display text-4xl sm:text-5xl mb-2 section-title">SUGERENCIAS</h2>
       <p class="text-gray-400 text-sm">¿Qué poster o diseño te gustaría ver?</p>
     </div>
     <div class="bg-black/40 backdrop-blur rounded-2xl border border-white/10 p-6 space-y-4">
       <textarea id="sugerencia-text" rows="3" placeholder="Ej: más de Anuel, Boca 2000, frases de canciones..." class="w-full bg-urban-black border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent resize-none"></textarea>
       <input type="text" id="sugerencia-nombre" placeholder="Tu nombre (opcional)" class="w-full bg-urban-black border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent"/>
       <button onclick="enviarSugerencia()" class="w-full bg-urban-accent text-urban-black font-bold py-3 rounded-xl hover:bg-white transition">Enviar sugerencia</button>
-      <p id="sugerencia-ok" class="text-green-400 text-sm text-center hidden">¡Gracias! Se copió para mandarla por IG.</p>
+      <p id="sugerencia-ok" class="text-green-400 text-sm text-center hidden">¡Gracias! Se copió para mandarla por WhatsApp.</p>
     </div>
   </div>
 </section>
@@ -996,28 +1017,18 @@
 <section id="resenas" class="py-14 px-4">
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-10">
-      <p class="text-urban-cyan text-xs tracking-[0.25em] uppercase mb-1">Clientes</p>
-      <h2 class="font-display text-4xl sm:text-5xl mb-2">RESEÑAS</h2>
-    </div>
-    <div class="grid sm:grid-cols-3 gap-4 mb-10">
-      <div class="bg-black/40 backdrop-blur rounded-xl p-5 border border-white/5">
-        <div class="flex gap-0.5 text-urban-accent text-sm mb-3">★★★★★</div>
-        <p class="text-sm text-gray-300 mb-3">"Los posters de Milo J quedaron increíbles, calidad top y llegada rápida en Merlo."</p>
-        <p class="text-xs text-gray-500">— Sofía · Merlo</p>
-      </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl p-5 border border-white/5">
-        <div class="flex gap-0.5 text-urban-accent text-sm mb-3">★★★★★</div>
-        <p class="text-sm text-gray-300 mb-3">"Pedí el de Messi grande y un custom. Todo impecable. Recomiendo."</p>
-        <p class="text-xs text-gray-500">— Lucas · Libertad</p>
-      </div>
-      <div class="bg-black/40 backdrop-blur rounded-xl p-5 border border-white/5">
-        <div class="flex gap-0.5 text-urban-accent text-sm mb-3">★★★★★</div>
-        <p class="text-sm text-gray-300 mb-3">"Las pulseras elastizadas y el poster de Airbag, 10/10. Muy buena atención."</p>
-        <p class="text-xs text-gray-500">— Valen · Plaza de los Patos</p>
-      </div>
+      <p class="text-urban-cyan text-xs tracking-[0.3em] uppercase mb-1">Clientes</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-2 section-title">RESEÑAS</h2>
+      <p class="text-gray-500 text-sm">Lo que dicen quienes ya compraron</p>
     </div>
 
-    <div class="bg-black/40 backdrop-blur rounded-2xl border border-white/10 p-6 max-w-xl mx-auto">
+    <div id="resenas-lista" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+      <p id="resenas-vacio" class="col-span-full text-center text-gray-500 text-sm py-8 border border-dashed border-white/10 rounded-xl">
+        Todavía no hay reseñas. ¡Sé el primero!
+      </p>
+    </div>
+
+    <div class="card-product backdrop-blur rounded-2xl border border-white/10 p-6 max-w-xl mx-auto">
       <p class="font-medium text-sm mb-4 text-center">Dejá tu reseña</p>
       <div class="space-y-3">
         <div class="flex justify-center gap-1" id="star-picker">
@@ -1027,10 +1038,10 @@
           <button type="button" onclick="setStars(4)" class="star-btn text-2xl text-gray-600 hover:text-urban-accent transition" data-s="4">★</button>
           <button type="button" onclick="setStars(5)" class="star-btn text-2xl text-gray-600 hover:text-urban-accent transition" data-s="5">★</button>
         </div>
-        <textarea id="resena-text" rows="2" placeholder="Contá tu experiencia..." class="w-full bg-urban-black border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent resize-none"></textarea>
-        <input type="text" id="resena-nombre" placeholder="Tu nombre" class="w-full bg-urban-black border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent"/>
-        <button onclick="enviarResena()" class="w-full bg-white/10 hover:bg-urban-accent hover:text-black font-bold py-3 rounded-xl transition text-sm">Enviar reseña</button>
-        <p id="resena-ok" class="text-green-400 text-sm text-center hidden">¡Gracias por tu reseña!</p>
+        <textarea id="resena-text" rows="2" placeholder="Contá tu experiencia..." class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent resize-none"></textarea>
+        <input type="text" id="resena-nombre" placeholder="Tu nombre" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent"/>
+        <button onclick="enviarResena()" class="w-full bg-urban-accent text-urban-black hover:bg-white font-bold py-3 rounded-xl transition text-sm">Publicar reseña</button>
+        <p id="resena-ok" class="text-green-400 text-sm text-center hidden">¡Gracias! Tu reseña ya se ve abajo.</p>
       </div>
     </div>
   </div>
@@ -1040,24 +1051,24 @@
 <section id="pedido" class="py-14 px-4">
   <div class="max-w-xl mx-auto">
     <div class="text-center mb-8">
-      <h2 class="font-display text-4xl sm:text-5xl mb-2">CÓMO PEDIR</h2>
+      <h2 class="font-display text-4xl sm:text-5xl mb-2 section-title">CÓMO PEDIR</h2>
     </div>
     <div class="space-y-4 text-sm mb-10">
-      <div class="flex gap-4 bg-black/40 backdrop-blur rounded-xl p-4 border border-white/5">
+      <div class="flex gap-4 card-product backdrop-blur rounded-xl p-4">
         <span class="font-display text-2xl text-urban-accent shrink-0">1</span>
         <div><p class="font-medium mb-1">Elegí productos</p><p class="text-gray-400">Tocá un poster, agregalo a la cesta. Armá custom o pulseras.</p></div>
       </div>
-      <div class="flex gap-4 bg-black/40 backdrop-blur rounded-xl p-4 border border-white/5">
+      <div class="flex gap-4 card-product backdrop-blur rounded-xl p-4">
         <span class="font-display text-2xl text-urban-accent shrink-0">2</span>
-        <div><p class="font-medium mb-1">Revisá la cesta</p><p class="text-gray-400">Botón 🛒 arriba. Podés aplicar un cupón si tenés.</p></div>
+        <div><p class="font-medium mb-1">Revisá la cesta</p><p class="text-gray-400">Botón 🛒 arriba. Revisá productos y total.</p></div>
       </div>
-      <div class="flex gap-4 bg-black/40 backdrop-blur rounded-xl p-4 border border-white/5">
+      <div class="flex gap-4 card-product backdrop-blur rounded-xl p-4">
         <span class="font-display text-2xl text-urban-accent shrink-0">3</span>
-        <div><p class="font-medium mb-1">Enviá el pedido</p><p class="text-gray-400">Desde la cesta tocá “Enviar pedido”. Se abre Instagram y se copia el resumen para pegarlo en <a href="https://instagram.com/urbanixs_" target="_blank" class="text-urban-cyan underline">@urbanixs_</a>.</p></div>
+        <div><p class="font-medium mb-1">Enviá por WhatsApp</p><p class="text-gray-400">Desde la cesta tocá el botón de WhatsApp. Se abre el chat con el pedido listo (11 7645-6958). Si pediste un custom, adjuntá la foto en el mensaje.</p></div>
       </div>
-      <div class="flex gap-4 bg-black/40 backdrop-blur rounded-xl p-4 border border-white/5">
+      <div class="flex gap-4 card-product backdrop-blur rounded-xl p-4">
         <span class="font-display text-2xl text-urban-accent shrink-0">4</span>
-        <div><p class="font-medium mb-1">Pago y entrega</p><p class="text-gray-400">Coordinamos por el chat.</p></div>
+        <div><p class="font-medium mb-1">Pago y entrega</p><p class="text-gray-400">Alias <span class="font-mono text-urban-accent">castroromann</span> o efectivo. Coordinamos entrega por WhatsApp.</p></div>
       </div>
     </div>
 
@@ -1237,6 +1248,7 @@ function buildOrderText() {
   text += '\nSubtotal: $' + sub.toLocaleString('es-AR');
   text += '\n*Total: $' + total.toLocaleString('es-AR') + '*';
   text += '\n\nPago: transferencia al alias castroromann';
+  text += '\n\n(Si hay poster custom, adjunto la foto)';
   text += '\n\nPunto de entrega: ';
   return text;
 }
@@ -1269,16 +1281,41 @@ function closeCart() {
 
 function sendOrder() { sendWhatsApp("gonza"); }
 
+function getResenas() {
+  try { return JSON.parse(localStorage.getItem('urbanixs_resenas') || '[]'); }
+  catch { return []; }
+}
+function saveResenas(list) {
+  localStorage.setItem('urbanixs_resenas', JSON.stringify(list));
+}
+function renderResenas() {
+  const list = getResenas();
+  const box = document.getElementById('resenas-lista');
+  if (!box) return;
+  if (!list.length) {
+    box.innerHTML = '<p id="resenas-vacio" class="col-span-full text-center text-gray-500 text-sm py-8 border border-dashed border-white/10 rounded-xl">Todavía no hay reseñas. ¡Sé el primero!</p>';
+    return;
+  }
+  box.innerHTML = list.map(r => {
+    const stars = '★'.repeat(r.stars || 5) + '☆'.repeat(5 - (r.stars || 5));
+    return '<div class="card-product backdrop-blur rounded-xl p-5 border border-white/5">' +
+      '<div class="flex gap-0.5 text-urban-accent text-sm mb-3">' + stars + '</div>' +
+      '<p class="text-sm text-gray-300 mb-3">"' + (r.text || '').replace(/</g,'&lt;') + '"</p>' +
+      '<p class="text-xs text-gray-500">— ' + (r.nombre || 'Anónimo').replace(/</g,'&lt;') + '</p>' +
+      '</div>';
+  }).join('');
+}
 function enviarResena() {
   const text = document.getElementById('resena-text').value.trim();
-  const nombre = document.getElementById('resena-nombre').value.trim() || 'Anónimo';
+  const nombre = (document.getElementById('resena-nombre').value || '').trim() || 'Anónimo';
   if (!text) { alert('Escribí tu reseña'); return; }
-  const stars = '★'.repeat(selectedStars) + '☆'.repeat(5 - selectedStars);
-  const msg = 'Reseña ' + stars + ' de ' + nombre + ':\n' + text;
-  if (navigator.clipboard) navigator.clipboard.writeText(msg).catch(()=>{});
-  document.getElementById('resena-ok').classList.remove('hidden');
+  const list = getResenas();
+  list.unshift({ text: text, nombre: nombre, stars: selectedStars || 5, fecha: Date.now() });
+  saveResenas(list);
   document.getElementById('resena-text').value = '';
-  window.open('https://instagram.com/urbanixs_', '_blank');
+  document.getElementById('resena-nombre').value = '';
+  document.getElementById('resena-ok').classList.remove('hidden');
+  renderResenas();
 }
 
 
@@ -1347,6 +1384,7 @@ function addCustomToCart() {
   let img = null;
   if (fileEl && fileEl.files && fileEl.files[0]) {
     img = URL.createObjectURL(fileEl.files[0]);
+    window._lastCustomFile = fileEl.files[0];
   }
   const label = 'Custom ' + sizeLabel + (indicaciones ? ' · ' + indicaciones : '');
   addToCart(label, 'Personalizado', price, img);
@@ -1392,6 +1430,7 @@ function enviarSugerencia() {
 
 
 updateCartUI();
+try{renderResenas();}catch(e){}
 </script>
 </body>
 </html>
