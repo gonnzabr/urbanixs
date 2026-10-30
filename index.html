@@ -22,7 +22,15 @@
     }
   </script>
   <style>
-    body{background:#061018; overflow-x:hidden}
+    body{background:#061018; overflow-x:hidden; color:#e5e7eb}
+    body::before {
+      content:'';
+      position:fixed; inset:0; z-index:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34,211,238,0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(34,211,238,0.04), transparent),
+        radial-gradient(ellipse 50% 30% at 0% 80%, rgba(125,211,252,0.05), transparent);
+    }
     .gradient-text{background:linear-gradient(90deg,#7dd3fc,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .card-hover{transition:transform .25s,box-shadow .25s;cursor:pointer}
     .card-hover:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 12px 28px rgba(34,211,238,.18)}
@@ -61,7 +69,7 @@
 
     /* Animated background */
     .bg-marquee {
-      position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: 0.18;
+      position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: 0.2;
     }
     .bg-row {
       display: flex; gap: 1rem; width: max-content;
@@ -96,6 +104,100 @@
     .logo-glow { animation: pulseGlow 3s ease-in-out infinite; }
 
     /* Design v2 */
+
+    /* ——— Innovaciones facheras ——— */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; z-index: 100;
+      width: 0%; background: linear-gradient(90deg, #22d3ee, #7dd3fc, #22d3ee);
+      box-shadow: 0 0 12px rgba(34,211,238,0.6);
+      transition: width 0.05s linear;
+    }
+    .toast {
+      position: fixed; bottom: 5.5rem; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: rgba(6,16,24,0.95); border: 1px solid rgba(34,211,238,0.4);
+      color: #fff; padding: 0.75rem 1.25rem; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600; z-index: 200;
+      opacity: 0; pointer-events: none; transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+      box-shadow: 0 8px 32px rgba(34,211,238,0.2);
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    @media (min-width: 640px) { .toast { bottom: 2rem; } }
+    .filter-chips {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .filter-chip {
+      padding: 0.4rem 0.9rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      color: #9ca3af; transition: all 0.2s; cursor: pointer;
+    }
+    .filter-chip:hover, .filter-chip.active {
+      background: rgba(34,211,238,0.15); border-color: #22d3ee; color: #22d3ee;
+      box-shadow: 0 0 16px rgba(34,211,238,0.2);
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .badge-hot {
+      position: absolute; top: 0.5rem; left: 0.5rem; z-index: 5;
+      background: linear-gradient(135deg, #22d3ee, #06b6d4);
+      color: #061018; font-size: 0.65rem; font-weight: 800;
+      padding: 0.2rem 0.5rem; border-radius: 0.35rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      box-shadow: 0 2px 10px rgba(34,211,238,0.4);
+    }
+    .wa-copy-btn {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.7rem; color: #7dd3fc; cursor: pointer;
+      border: 1px dashed rgba(34,211,238,0.3); padding: 0.2rem 0.5rem;
+      border-radius: 0.35rem; transition: all 0.2s;
+    }
+    .wa-copy-btn:hover { background: rgba(34,211,238,0.1); border-style: solid; }
+    .section-divider {
+      height: 1px; max-width: 6rem; margin: 0 auto;
+      background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+    }
+    #cart-count.show {
+      animation: badgePop 0.4s cubic-bezier(0.16,1,0.3,1);
+    }
+    @keyframes badgePop {
+      0% { transform: scale(0.5); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+    .glass-panel {
+      background: rgba(6,16,24,0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+
+    .promo-banner {
+      background: linear-gradient(135deg, rgba(34,211,238,0.12) 0%, rgba(6,16,24,0.9) 50%, rgba(34,211,238,0.08) 100%);
+      box-shadow: 0 0 30px rgba(34,211,238,0.08);
+      animation: promoPulse 3s ease-in-out infinite;
+    }
+    @keyframes promoPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(34,211,238,0.08); }
+      50% { box-shadow: 0 0 35px rgba(34,211,238,0.18); }
+    }
+    .content-layer { position: relative; z-index: 1; }
+    section { scroll-margin-top: 5rem; }
+    .card-product {
+      background: linear-gradient(165deg, rgba(15,31,44,0.65), rgba(6,16,24,0.75));
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    .card-product:hover {
+      border-color: rgba(34,211,238,0.35);
+      box-shadow: 0 16px 48px rgba(34,211,238,0.12);
+    }
+    footer, .footer-bar {
+      border-top: 1px solid rgba(34,211,238,0.1);
+    }
+
     .nav-pill {
       letter-spacing: 0.02em;
     }
@@ -163,14 +265,15 @@
     .nav-pill {
       font-size: 0.8rem;
       font-weight: 600;
-      padding: 0.45rem 0.9rem;
+      padding: 0.5rem 1rem;
       border-radius: 9999px;
       color: #d1d5db;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
       transition: all 0.25s ease;
       position: relative;
       overflow: hidden;
+      letter-spacing: 0.03em;
     }
     .nav-pill:hover {
       color: #0a0a0a;
@@ -327,6 +430,8 @@
   </div>
 </div>
 
+<div class="scroll-progress" id="scroll-progress"></div>
+<div id="toast" class="toast"></div>
 <div class="content-layer">
 
 <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
@@ -457,6 +562,15 @@
       <p class="text-gray-400 text-sm">Posters de portadas · $3.000 c/u · Tocá para ver y agregar</p>
     </div>
     <div class="h-px bg-gradient-to-r from-urban-accent/50 via-white/10 to-transparent my-6"></div>
+    <div class="filter-chips max-w-6xl mx-auto px-4">
+      <a href="#albumes" class="filter-chip active">Música</a>
+      <a href="#futbol" class="filter-chip">Fútbol</a>
+      <a href="#cristianos" class="filter-chip">Cristianos</a>
+      <a href="#anime" class="filter-chip">Anime</a>
+      <a href="#pulseras" class="filter-chip">Pulseras</a>
+      <a href="#custom" class="filter-chip">Custom</a>
+    </div>
+
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 
       <div class="card-product backdrop-blur rounded-xl overflow-hidden">
@@ -983,15 +1097,31 @@
 </section>
 
 <!-- PULSERAS -->
-<section id="pulseras" class="py-14 px-4">
+<section id="pulseras" class="py-16 px-4">
   <div class="max-w-xl mx-auto">
     <div class="text-center mb-8">
       <p class="text-urban-cyan text-xs tracking-[0.3em] uppercase mb-1">Muñeca</p>
-      <h2 class="font-display text-4xl sm:text-6xl mb-2">PULSERAS</h2>
-      <p class="text-gray-400 text-sm">1u $2.000 · 2x $3.500 · Hilo o elastizada</p>
+      <h2 class="font-display text-4xl sm:text-6xl mb-3 section-title">PULSERAS</h2>
+      <p class="text-gray-400 text-sm">Hilo o elastizada · Personalizadas</p>
     </div>
 
-    <div class="card-product backdrop-blur rounded-2xl border border-urban-accent/20 p-6 sm:p-8 space-y-6 shadow-lg shadow-cyan-500/5">
+    <!-- Promo banner -->
+    <div class="promo-banner mb-6 rounded-2xl p-4 sm:p-5 flex items-center gap-4 border border-urban-accent/30 relative overflow-hidden">
+      <span class="badge-hot" style="position:relative;top:0;left:0">Promo</span>
+      <div class="shrink-0 w-14 h-14 rounded-xl bg-urban-accent/20 flex items-center justify-center">
+        <span class="font-display text-2xl text-urban-accent">2x</span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="font-bold text-white text-sm sm:text-base">Promo 2 × $3.500</p>
+        <p class="text-xs text-gray-400 mt-0.5">Llevá 2 y pagás menos. Unidad suelta $2.000</p>
+      </div>
+      <div class="text-right shrink-0">
+        <p class="text-urban-accent font-display text-xl sm:text-2xl">$3.500</p>
+        <p class="text-[10px] text-gray-500 line-through">$4.000</p>
+      </div>
+    </div>
+
+    <div class="card-product backdrop-blur rounded-2xl border border-urban-accent/20 p-6 sm:p-8 space-y-6">
       <div>
         <label class="block text-sm text-gray-400 mb-3">Tipo de material</label>
         <div class="grid grid-cols-2 gap-3">
@@ -999,14 +1129,14 @@
             <input type="radio" name="pulsera-tipo" value="Hilo" checked class="accent-cyan-400"/>
             <div>
               <p class="font-medium text-sm">Hilo</p>
-              <p class="text-xs text-gray-500">Hecha a mano, resistente</p>
+              <p class="text-xs text-gray-500">Hecha a mano</p>
             </div>
           </label>
           <label class="flex items-center gap-3 bg-black/50 rounded-xl p-4 border border-white/10 cursor-pointer transition hover:border-urban-accent/40 has-[:checked]:border-urban-accent has-[:checked]:bg-urban-accent/5">
             <input type="radio" name="pulsera-tipo" value="Elastizada" class="accent-cyan-400"/>
             <div>
               <p class="font-medium text-sm">Elastizada</p>
-              <p class="text-xs text-gray-500">Ajustable, cómoda</p>
+              <p class="text-xs text-gray-500">Ajustable</p>
             </div>
           </label>
         </div>
@@ -1014,31 +1144,29 @@
 
       <div>
         <label class="block text-sm text-gray-400 mb-2">Álbum / frase (opcional)</label>
-        <input type="text" id="pulsera-texto" placeholder="Ej: logo Urbanixs, Real Hasta la Muerte..." class="w-full bg-urban-black border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent"/>
+        <input type="text" id="pulsera-texto" placeholder="Ej: logo Urbanixs, Real Hasta la Muerte..." class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-urban-accent"/>
       </div>
 
       <div>
-        <label class="block text-sm text-gray-400 mb-2">Cantidad</label>
-        <div class="grid grid-cols-2 gap-3 mb-4">
-          <label class="flex flex-col bg-black/50 rounded-xl p-4 border border-white/10 cursor-pointer transition hover:border-urban-accent/40 has-[:checked]:border-urban-accent has-[:checked]:bg-urban-accent/5">
-            <input type="radio" name="pulsera-qty" value="1" checked class="accent-cyan-400 mb-2"/>
-            <p class="font-medium text-sm">1 unidad</p>
-            <p class="text-urban-accent font-bold">$2.000</p>
-          </label>
-          <label class="flex flex-col bg-black/50 rounded-xl p-4 border border-white/10 cursor-pointer transition hover:border-urban-accent/40 has-[:checked]:border-urban-accent has-[:checked]:bg-urban-accent/5">
-            <input type="radio" name="pulsera-qty" value="2" class="accent-cyan-400 mb-2"/>
-            <p class="font-medium text-sm">2 unidades</p>
-            <p class="text-urban-accent font-bold">$3.500</p>
-          </label>
+        <label class="block text-sm text-gray-400 mb-3">Cantidad</label>
+        <div class="flex items-center justify-between gap-4 bg-black/50 rounded-xl p-3 border border-white/10">
+          <button type="button" onclick="changePulseraQty(-1)" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-urban-accent hover:text-black font-bold text-xl transition flex items-center justify-center">−</button>
+          <div class="text-center">
+            <p id="pulsera-qty-display" class="font-display text-3xl text-white leading-none">1</p>
+            <p id="pulsera-price-display" class="text-urban-accent text-sm font-bold mt-1">$2.000</p>
+          </div>
+          <button type="button" onclick="changePulseraQty(1)" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-urban-accent hover:text-black font-bold text-xl transition flex items-center justify-center">+</button>
         </div>
-        <button type="button" onclick="addPulsera()" class="w-full bg-urban-accent text-urban-black font-bold py-3.5 rounded-xl hover:bg-white transition text-base">
-          + Agregar pulsera a la cesta
-        </button>
+        <p id="pulsera-promo-hint" class="text-xs text-gray-500 text-center mt-2">Sumá 1 más y activás la promo 2x $3.500</p>
+        <input type="hidden" id="pulsera-qty" value="1"/>
       </div>
+
+      <button type="button" onclick="addPulsera()" class="w-full bg-urban-accent text-urban-black font-bold py-3.5 rounded-xl hover:bg-white transition text-base shadow-lg shadow-cyan-500/20">
+        + Agregar pulsera a la cesta
+      </button>
     </div>
   </div>
 </section>
-
 
 <!-- SUGERENCIAS -->
 <section id="sugerencias" class="py-14 px-4">
@@ -1108,7 +1236,7 @@
       </div>
       <div class="flex gap-4 card-product backdrop-blur rounded-xl p-4">
         <span class="font-display text-2xl text-urban-accent shrink-0">3</span>
-        <div><p class="font-medium mb-1">Enviá por WhatsApp</p><p class="text-gray-400">Desde la cesta tocá el botón de WhatsApp. Se abre el chat con el pedido listo (11 2720-1201). Si pediste un custom, adjuntá la foto en el mensaje.</p></div>
+        <div><p class="font-medium mb-1">Enviá por WhatsApp</p><p class="text-gray-400">Desde la cesta tocá el botón de WhatsApp. Se abre el chat con el pedido listo (11 7645-6958). Si pediste un custom, adjuntá la foto en el mensaje.</p></div>
       </div>
       <div class="flex gap-4 card-product backdrop-blur rounded-xl p-4">
         <span class="font-display text-2xl text-urban-accent shrink-0">4</span>
@@ -1133,7 +1261,13 @@
           <li class="flex items-center gap-2"><span class="text-urban-accent">●</span> Transferencia</li>
           <li class="flex items-center gap-2"><span class="text-urban-accent">●</span> Efectivo</li>
           <li class="mt-3 text-white text-sm"><span class="text-gray-500">Alias:</span> <span class="font-mono text-urban-accent">castroromann</span></li>
-          <li class="mt-4 text-white text-sm"><span class="text-gray-500">WhatsApp:</span> <a href="https://wa.me/541127201201" class="text-urban-accent font-medium">11 2720-1201</a></li>
+          <li class="mt-4 text-white text-sm flex flex-wrap items-center gap-2">
+            <span class="text-gray-500">WhatsApp:</span>
+            <a href="https://wa.me/541176456958" class="text-urban-accent font-medium">
+  <span>💬</span> WhatsApp
+</a>
+            <button type="button" onclick="copyPhone()" class="wa-copy-btn">📋 Copiar</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -1153,8 +1287,8 @@
 
 
 <!-- FLOAT CTA -->
-<a href="#pedido" class="float-cta bg-urban-accent text-urban-black font-bold text-sm px-5 py-3 rounded-full flex items-center gap-2 hover:bg-white transition">
-  🛒 Pedí acá
+<a href="https://wa.me/541176456958" target="_blank" class="float-cta bg-urban-accent text-urban-black font-bold text-sm px-5 py-3 rounded-full flex items-center gap-2 hover:bg-white transition shadow-lg shadow-cyan-500/30">
+  💬 WhatsApp
 </a>
 
 </div><!-- content-layer -->
@@ -1197,12 +1331,12 @@
 
       <p class="text-xs text-gray-500">Entregas: Plaza Libertad · Est. Merlo · Plaza de los Patos y alrededores</p>
       <p class="text-xs text-gray-500">Pago: Transferencia alias <span class="text-urban-accent">castroromann</span> · Efectivo</p>
-      <p class="text-xs text-gray-500">WhatsApp: <span class="text-urban-accent">11 2720-1201</span></p>
+      <p class="text-xs text-gray-500">WhatsApp: <span class="text-urban-accent">11 7645-6958</span></p>
 
       <div class="space-y-2">
         <p class="text-xs text-gray-500 text-center">Transferí al alias <span class="text-urban-accent font-mono">castroromann</span></p>
         <button onclick="sendWhatsApp('gonza')" class="cart-btn-glow w-full bg-urban-accent text-urban-black font-bold py-3.5 rounded-xl hover:bg-white hover:scale-[1.02] transition-all">
-          Pedir por WhatsApp · 11 2720-1201
+          Pedir por WhatsApp · 11 7645-6958
         </button>
         <button onclick="clearCart()" class="w-full text-gray-500 text-sm hover:text-red-400 transition py-1">Vaciar cesta</button>
       </div>
@@ -1293,7 +1427,7 @@ function buildOrderText() {
 
 function sendWhatsApp(who) {
   if (!cart.length) { alert('La cesta está vacía'); return; }
-  const phone = '541127201201';
+  const phone = '541176456958';
   const text = buildOrderText();
   if (navigator.clipboard) navigator.clipboard.writeText(text).catch(()=>{});
   window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(text), '_blank');
@@ -1302,6 +1436,7 @@ function sendWhatsApp(who) {
 function addToCart(name, cat, price, img) {
   cart.push({ name, cat, price, img: img || null });
   saveCart();
+  showToast('✓ ' + name + ' agregado');
 }
 
 function removeFromCart(i) { cart.splice(i, 1); saveCart(); }
@@ -1429,17 +1564,37 @@ function addCustomToCart() {
   openCart();
 }
 
-function addPulsera(qty) {
-  const tipoEl = document.querySelector('input[name="pulsera-tipo"]:checked');
-  const qtyEl = document.querySelector('input[name="pulsera-qty"]:checked');
-  const textoEl = document.getElementById('pulsera-texto');
-  const tipo = tipoEl ? tipoEl.value : 'Hilo';
-  if (qty === undefined || qty === null) {
-    qty = qtyEl ? parseInt(qtyEl.value, 10) : 1;
+function pulseraPrice(qty) {
+  // Promo: cada par sale $3500, unidad suelta $2000
+  const pairs = Math.floor(qty / 2);
+  const rest = qty % 2;
+  return pairs * 3500 + rest * 2000;
+}
+function changePulseraQty(delta) {
+  const input = document.getElementById('pulsera-qty');
+  let q = parseInt(input.value, 10) || 1;
+  q = Math.max(1, Math.min(20, q + delta));
+  input.value = q;
+  document.getElementById('pulsera-qty-display').textContent = q;
+  const price = pulseraPrice(q);
+  document.getElementById('pulsera-price-display').textContent = '$' + price.toLocaleString('es-AR');
+  const hint = document.getElementById('pulsera-promo-hint');
+  if (q % 2 === 1) {
+    hint.textContent = 'Sumá 1 más y activás la promo 2x $3.500';
+    hint.className = 'text-xs text-gray-500 text-center mt-2';
+  } else {
+    hint.textContent = '✓ Promo aplicada: ' + (q/2) + ' par' + (q>2?'es':'') + ' a $3.500';
+    hint.className = 'text-xs text-urban-accent text-center mt-2 font-medium';
   }
+}
+function addPulsera() {
+  const tipoEl = document.querySelector('input[name="pulsera-tipo"]:checked');
+  const textoEl = document.getElementById('pulsera-texto');
+  const qty = parseInt(document.getElementById('pulsera-qty').value, 10) || 1;
+  const tipo = tipoEl ? tipoEl.value : 'Hilo';
   const texto = (textoEl && textoEl.value) ? textoEl.value.trim() : '';
-  const price = qty === 2 ? 3500 : 2000;
-  const label = (qty === 2 ? '2x Pulsera' : 'Pulsera') + ' ' + tipo + (texto ? ' · ' + texto : '');
+  const price = pulseraPrice(qty);
+  const label = qty + 'x Pulsera ' + tipo + (texto ? ' · ' + texto : '');
   addToCart(label, 'Pulseras', price, null);
   openCart();
 }
@@ -1463,9 +1618,46 @@ function enviarSugerencia() {
   if (navigator.clipboard) navigator.clipboard.writeText(msg).catch(()=>{});
   document.getElementById('sugerencia-ok').classList.remove('hidden');
   document.getElementById('sugerencia-text').value = '';
-  window.open('https://wa.me/541127201201?text=' + encodeURIComponent(msg), '_blank');
+  window.open('https://wa.me/541176456958?text=' + encodeURIComponent(msg), '_blank');
 }
 
+
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+function copyPhone() {
+  const num = '1176456958';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(num).then(() => showToast('Número copiado ✓')).catch(() => {
+      showToast('11 7645-6958');
+    });
+  } else showToast('11 7645-6958');
+}
+// Scroll progress
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('scroll-progress');
+  if (!el) return;
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  el.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+}, { passive: true });
+// Reveal on scroll
+function initReveal() {
+  const els = document.querySelectorAll('.card-product, .promo-banner, section > div');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', initReveal);
+// Patch addToCart to toast
+const _origAddToCart = typeof addToCart === 'function' ? addToCart : null;
 
 updateCartUI();
 try{renderResenas();}catch(e){}
